@@ -1,5 +1,5 @@
 let arr1 = [5,1,2,3,7];
-function reverseAnArray(ind,arr){
+function reverseAnArray(arr,ind=0){
    if (ind >= Math.floor(arr.length / 2)) {
         return arr;
     }
@@ -8,8 +8,8 @@ function reverseAnArray(ind,arr){
     arr[ind] = arr[arr.length - ind - 1];
     arr[arr.length - ind - 1] = temp;
 
-    return reverseAnArray(ind + 1, arr);
+    return reverseAnArray(arr,ind + 1);
 }
 
-const result = reverseAnArray(0,arr1)
+const result = reverseAnArray(arr1)
 console.log('Reverse array >>',result );
