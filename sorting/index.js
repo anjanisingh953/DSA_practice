@@ -1,25 +1,24 @@
 const arr = [15, 2, 3, 16, 14, 10, 51, 3, 4, 8];
 
-function bubble_sort2(arr) {
+function sorting(arr) {
     let n = arr.length;
 
-    for (let i = n - 1; i > 1; i--) {
-        let didSwap = false;
-
-        for (let j = 0; j < i; j++) {
-            if (arr[j] > arr[j + 1]) {
-
-                let temp = arr[j];
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp;
-                // [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-                didSwap = true;
+    for(let i =0; i<arr.length-2; i++){
+            let min = i;
+            
+        for(let j = i+1; j<arr.length; j++){
+            if(arr[j]<arr[min]){
+                min = j
             }
         }
 
-        if (!didSwap) break;
+        let temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp
+
     }
+
     return arr;
 }
-const result = bubble_sort2(arr);
+const result = sorting(arr);
 console.log('result>>>', result);
