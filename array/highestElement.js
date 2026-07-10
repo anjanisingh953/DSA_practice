@@ -3,7 +3,7 @@ const arr = [2,10,5,45,7,2,181,20,15];
 function highestElement(arr){
     let n = arr.length;
      let highestIndex = 0;   
-    for(let i =0; i<arr.length; i++){
+    for(let i =0; i<n; i++){
         if(arr[i]>arr[highestIndex]){
             highestIndex = i
         }
