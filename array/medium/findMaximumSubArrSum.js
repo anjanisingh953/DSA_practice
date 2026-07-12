@@ -1,6 +1,6 @@
     const arr = [-2,-3,4,-1,-2,1,5,-3];
 
-    //Return the maximum sum of subArray 
+    //Return the maximum sum of subArray using kadane's algorithm
     function findMaximumSubArrSum(arr){
         let maxArrSum = -1;;
         let sum = 0;
@@ -20,7 +20,7 @@
     }
 
 
-//Return the subArray, which subArray has maximum sum
+//Return the subArray, which subArray has maximum sum using kadane's algorithm
     // function findMaximumSubArrSum(arr){
     //     let maxArrSum = -1;;
     //     let sum = 0;
