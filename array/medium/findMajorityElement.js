@@ -1,5 +1,7 @@
 const arr = [2, 2, 3, 3, 1, 2, 2];
 
+
+//Boyer-Moore Majority Voting Algorithm used here
 function findMajorityElement(arr) {
     let n = arr.length;
     let count = 0;
