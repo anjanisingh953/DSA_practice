@@ -9,7 +9,8 @@ function findMajorityElement(arr) {
 
     for (let i = 0; i < n; i++) {
         if (count == 0) {
-            el = arr[i]
+            el = arr[i];
+            count = 1;
         }
         else if (el == arr[i]) {
             count++;
