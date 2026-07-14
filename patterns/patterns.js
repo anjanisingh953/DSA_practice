@@ -235,22 +235,36 @@ function pattern20(n) {
 
 }
 
-function pattern21(n){
+function pattern21(n) {
 
-    for(let i=0; i<n; i++){
-        
-        for(let j=0; j<n; j++){
-              if(i==0 || i == n-1 || j==0 || j== n-1){
-                  process.stdout.write('*')
-                }else{
-                  process.stdout.write(' ')
-              }     
+    for (let i = 0; i < n; i++) {
+
+        for (let j = 0; j < n; j++) {
+            if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
+                process.stdout.write('*')
+            } else {
+                process.stdout.write(' ')
+            }
         }
 
         console.log();
-        
+
     }
 
 }
 
-pattern21(5);
+function pattern22(n) {
+
+    for (let i = 0; i < 2 * n - 1; i++) {
+        for (let j = 0; j < 2 * n - 1; j++) {
+            let top = i;
+            let left = j;
+            let right = (2 * n - 2) - j;
+            let bottom = (2 * n - 2) - i;
+            let finalDigit =n-(Math.min(Math.min(top, bottom), Math.min(left, right)));
+            process.stdout.write(finalDigit.toString());
+        }
+        console.log('');
+    }
+}
+pattern22(4)
