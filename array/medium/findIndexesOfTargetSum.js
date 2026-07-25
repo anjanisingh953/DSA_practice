@@ -10,14 +10,14 @@ function findIndexes(arr, target) {
 
         let sum = arr[left] + arr[right];
 
-        if (sum === target) {
-            return [left, right];
-        }
-        else if (sum < target) {
+        if (sum < target) {
             left++;
         }
-        else {
+        else if (sum > target) {
             right--;
+        }
+        else {
+            return [left, right];
         }
     }
 
